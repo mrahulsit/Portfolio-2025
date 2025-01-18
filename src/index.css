@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #333333; /* Matt black for scrollbar track */
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #fbbf24;
+  border-radius: 1em; /* Grey for scrollbar thumb */
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #333333; /* Matt black for scrollbar track */
+  border-radius: 10px;
+}
+
+:root {
+  --eerie-black-2: hsl(0, 0%, 9%);
+  --tw-bg-opacity: 1;
+  background-color: var(--eerie-black-2) /* #18181b */;
+  overflow-y: scroll;
+  user-select: none;
+}
+
+.loading {
+  transition: transform 0.3s ease;
+  animation: loadIn 0.8s ease-out;
+}
+
+@keyframes loadIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

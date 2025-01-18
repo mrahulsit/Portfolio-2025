@@ -1,0 +1,66 @@
+.timeline {
+  height: 19em;
+  width: 0.2em;
+  background-color: #2f2f2f;
+}
+.timeline .timeline-circle {
+  height: 1.1em;
+  width: 1.1em;
+  border-radius: 50%;
+  background-color: #2f2e2e;
+}
+
+.timeline-circle::after {
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #fbbf24;
+}
+
+.content-card {
+  position: relative;
+  background: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  padding-top: 45px;
+  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.2);
+  border-radius: 14px;
+  cursor: pointer;
+  z-index: 1;
+  width: 57em;
+  height: 26em;
+}
+
+.content-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 10%
+    ),
+    hsl(240, 2%, 13%);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.page_animation {
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

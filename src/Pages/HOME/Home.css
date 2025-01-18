@@ -1,0 +1,23 @@
+.bgcolor {
+  --eerie-black-1: hsl(240, 2%, 12%);
+  background-color: var(--eerie-black-1);
+  overflow-y: scroll;
+  max-height: 180vh !important;
+  scrollbar-width: none;
+}
+
+.homecontain {
+  display: flex;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-20.homecontain {
+    padding: 0.7rem;
+    flex-direction: column;
+    margin: 0;
+  }
+  .main-content-div {
+    margin: 0 !important;
+    height: 300vh !important;
+  }
+}

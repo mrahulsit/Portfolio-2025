@@ -1,0 +1,53 @@
+iframe {
+  filter: grayscale(1) invert(1);
+}
+.ptext_color::placeholder {
+  color: var(--jet);
+}
+
+.message {
+  position: relative;
+  background: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  box-shadow: 4px 5px 10px hsla(0, 0%, 0%, 0.2);
+  border-radius: 14px;
+  cursor: pointer;
+  z-index: 1;
+  width: 11.5em;
+  height: 3.5em;
+}
+
+.message::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 10%
+    ),
+    hsl(240, 2%, 13%);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 480px) {
+  #map {
+    width: 100%; /* Ensure full width on mobile */
+    height: 300px; /* Adjust height for visibility */
+    position: relative; /* Remove any offset */
+    top: 0;
+    right: 0;
+  }
+
+  .flex {
+    padding: 1rem; /* Add padding for spacing */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust heading size for mobile */
+  }
+}

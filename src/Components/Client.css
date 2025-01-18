@@ -1,0 +1,37 @@
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fbbf24; /* Customize the thumb color */
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background-color: #333333; /* Customize the track color */
+  border-radius: 50px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 480px) {
+  .mt-5.absolute {
+    margin-top: 0;
+    width: 100%;
+    top: 52em;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    padding: 0.8em;
+  }
+  .mt-5.absolute > span {
+    margin-left: 0.5em;
+  }
+  .flex.gap-12 > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: 15em;
+    object-fit: contain;
+  }
+  .flex.gap-12.items-center {
+    padding: 0;
+  }
+}

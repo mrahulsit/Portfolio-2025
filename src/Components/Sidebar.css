@@ -1,0 +1,142 @@
+.bgcolor {
+  --eerie-black-1: hsl(240, 2%, 13%);
+  background-color: var(--eerie-black-1);
+}
+.sidebar {
+  width: 27vw;
+  height: 120vh;
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+}
+
+.button_design {
+  background: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  box-shadow: 4px 5px 10px hsla(0, 0%, 0%, 0.2);
+  z-index: 1;
+}
+
+.button_design::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 10%
+    ),
+    hsl(240, 2%, 13%);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.small-image {
+  background: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  box-shadow: 4px 5px 10px hsla(0, 0%, 0%, 0.2);
+  z-index: 1;
+}
+.small-image::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 10%
+    ),
+    hsl(240, 2%, 13%);
+  border-radius: inherit;
+  z-index: -1;
+}
+.dash-line-mobile {
+  display: none;
+}
+@media (width < 480px) {
+  .sidebar {
+    width: 100%;
+    top: 0;
+    position: relative;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  .sidebar.sidebarOpen {
+    height: 55vh;
+    transition: height 0.5s ease-out;
+  }
+  .sidebar.sidebarClose {
+    height: 15vh;
+    transition: height 0.5s ease-out;
+  }
+  .sidebar > .sdmobile {
+    margin-top: 0em;
+    align-items: flex-start;
+    gap: 1em;
+  }
+  .sidebar > .sdmobile > .flex {
+    padding: 0;
+  }
+  .sidebar > div > div > div {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1em;
+  }
+  .sidebar > div > div > div > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+  }
+  .sdmobile > div > div:nth-child(2) > h1 {
+    font-size: 1.5em;
+  }
+  .sdmobile .upper-div {
+    gap: 1em;
+  }
+  .sdmobile .main-div {
+    gap: 0.5em;
+    width: 50%;
+  }
+  .sdmobile .stack-div {
+    border-radius: 0.5em;
+    padding: 0.5em;
+  }
+  .sdmobile .stack-div > div {
+    font-size: 0.8em;
+  }
+  .sidebar > .sdmobile div.dash-line {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .sidebar > .sdmobile .info-div {
+    width: 100%;
+    height: 100%;
+  }
+  .sidebar > .sdmobile .info-div > div {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+  .sidebar > .sdmobile .info-div > div > div {
+    padding: 0.5em;
+  }
+  .sidebar > .sdmobile .dash-line-mobile {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .sidebar > .sdmobile .social-div {
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+  }
+}

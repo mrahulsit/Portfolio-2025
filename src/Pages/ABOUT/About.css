@@ -1,0 +1,52 @@
+@media only screen and (max-width: 480px) {
+  #about {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0em 1.5em;
+    margin: auto;
+    z-index: -1;
+    margin-top: -1em;
+  }
+  #about p {
+    text-align: left;
+    font-size: 14px;
+  }
+  #about > span {
+    font-size: 25px;
+  }
+  #about #dash {
+    margin-top: 0.5rem;
+    height: 0.3rem;
+    width: 4.5em;
+  }
+  #about #contentbox {
+    width: 20em;
+    height: 7.5rem;
+    align-items: center;
+  }
+  #mainbox {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .pad .flex {
+    padding: 0.5em;
+  }
+  #boxtext {
+    padding: 0rem;
+  }
+  #about #boxtext span {
+    font-size: 17px;
+  }
+  #about #boxtext p {
+    font-size: 13px;
+  }
+  #boxtext .m-5 {
+    margin: auto 1rem;
+    margin-right: 1rem;
+  }
+  #about span.text-2xl {
+    font-size: 1.5em;
+  }
+}
