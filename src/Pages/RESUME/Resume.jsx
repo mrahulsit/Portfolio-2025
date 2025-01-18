@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./resume.css";
+import "./Resume.css";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import Experience from "../../assets/experience.png";
 export default function Resume() {
